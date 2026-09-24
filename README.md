@@ -347,21 +347,6 @@ Analysis of expensive books and genre-level average pricing can help identify di
 
 ---
 
-# 📈 Project Highlights
-
-| Area                   | Analysis                                       |
-| ---------------------- | ---------------------------------------------- |
-| **Database Design**    | Relational Books, Customers & Orders structure |
-| **Data Exploration**   | Table and record-level exploration             |
-| **Product Analysis**   | Genre, author, price, publication year         |
-| **Sales Analysis**     | Order quantity, revenue, sales volume          |
-| **Customer Analysis**  | Repeat orders, spending, geography             |
-| **Inventory Analysis** | Stock levels and remaining inventory           |
-| **Advanced SQL**       | Joins, aggregations, `HAVING`, `COALESCE`      |
-| **Business Analysis**  | Product, customer, sales & inventory insights  |
-
----
-
 # 🚀 Key Takeaway
 
 This project demonstrates how SQL can be used to move from **raw transactional data to structured business analysis**.
@@ -369,22 +354,5 @@ This project demonstrates how SQL can be used to move from **raw transactional d
 By connecting books, customers, and orders, the analysis provides a multi-dimensional view of **product performance, customer purchasing behavior, revenue, and inventory**.
 
 The project also demonstrates practical SQL skills required for entry-level Data Analyst roles, including **relational data modeling, joins, aggregation, filtering, date analysis, and business-oriented problem solving**.
-
----
-
-## 📁 Repository Structure
-
-```text
-Online-Bookstore/
-│
-├── Online Bookstore.sql
-└── README.md
-```
-
----
-
-## 🔗 SQL File
-
-The complete PostgreSQL script containing the database setup, table creation, data import, and analytical queries is available in this repository.
 
 **Tech Stack:** `PostgreSQL` · `SQL` · `Data Analysis` · `Business Intelligence`
