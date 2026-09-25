@@ -297,6 +297,44 @@ JOIN Customers c
     ON o.Customer_ID = c.Customer_ID
 WHERE o.Total_Amount > 30;
 ```
+## Inventory Analysis
+
+**Q1. What is the total stock currently available?**
+```sql
+SELECT SUM(Stock) AS Total_Stock
+FROM Books;
+```
+
+**Q2. Which books have the lowest stock levels?**
+```sql
+SELECT *
+FROM Books
+ORDER BY Stock ASC
+LIMIT 10;
+```
+
+**Q3. How much stock remains after fulfilling recorded orders?**
+```sql
+SELECT 
+    b.Book_ID,
+    b.Title,
+    b.Stock,
+    COALESCE(SUM(o.Quantity), 0) AS Order_Quantity,
+    b.Stock - COALESCE(SUM(o.Quantity), 0) AS Remaining_Quantity
+FROM Books b
+LEFT JOIN Orders o 
+    ON b.Book_ID = o.Book_ID
+GROUP BY b.Book_ID
+ORDER BY b.Book_ID;
+```
+
+**Q4. Which orders have a total value above $20?**
+```sql
+SELECT *
+FROM Orders
+WHERE Total_Amount > 20
+ORDER BY Total_Amount DESC;
+```
 
 # Business Insights Framework
 
