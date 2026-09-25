@@ -169,85 +169,29 @@ Before performing the analysis, the database was reviewed to understand the avai
 
 -----
 
-# Analysis & Business Questions
+# 🔍 SQL Analysis & Queries
 
-## 1. Product & Catalog Analysis
-
-The first set of queries focuses on understanding the bookstore's product catalog.
-
-### Key Analysis
-
-* Fiction books
-* Books published after 1950
-* Available genres
-* Most expensive books
-* Lowest-stock books
-* Fantasy book pricing
-
-### Business Value
-
-This analysis helps category and inventory teams understand the **composition, pricing, and availability of the bookstore's catalog**.
+The project uses PostgreSQL to answer practical business questions across **product performance, sales, customer behavior, and inventory management**.
 
 ---
 
-## 2. Sales & Revenue Analysis
+## Product & Catalog Analysis
 
-The project calculates overall revenue and examines order-level sales activity.
+### Q1. Which books belong to the Fiction genre?
 
-### Key Metrics
+```sql
+SELECT *
+FROM Books
+WHERE Genre = 'Fiction';
+```
 
-* Total revenue
-* Orders above $20
-* Orders with quantities greater than one
-* Books sold by genre
-* Books sold by author
-* Most frequently ordered book
+Q2. Which books were published after 1950?
 
-### Business Value
-
-These metrics help identify **high-performing products, genres, and authors** and provide a foundation for sales-performance monitoring.
-
-The revenue calculation is based on the `Total_Amount` recorded for orders.
-
----
-
-## 3. Customer Analysis
-
-Customer-level analysis focuses on purchasing frequency, spending, and geography.
-
-### Key Analysis
-
-* Customers from Canada
-* Customers placing at least two orders
-* Customers purchasing multiple quantities
-* Customers associated with orders above $30
-* Highest-spending customer
-
-### Business Value
-
-This analysis helps identify **repeat purchasing behavior and high-value customers**, while also providing a geographic view of the customer base.
-
-The repeat-customer analysis uses `GROUP BY` and `HAVING` to identify customers with at least two orders.
-
----
-
-## 4. Inventory Analysis
-
-Inventory analysis connects recorded stock with order quantities.
-
-### Key Analysis
-
-* Total available stock
-* Books with the lowest stock
-* Stock remaining after recorded orders
-
-The remaining inventory calculation compares current book stock against the quantity ordered and uses `COALESCE` to account for books with no matching orders.
-
-### Business Value
-
-This provides a foundation for identifying **potential low-stock products and inventory replenishment priorities**.
-
----
+```sql
+SELECT DISTINCT Title, Published_Year
+FROM Books
+WHERE Published_Year > 1950;
+```
 
 # Business Insights Framework
 
