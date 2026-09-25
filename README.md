@@ -29,50 +29,49 @@ Key business areas explored include:
 
 The project demonstrates the ability to translate business questions into structured SQL analysis.
 
----
+🔗 **[Check out the complete SQL code here →](OnlineBookstore.sql)**
 
+---
+## 📑 Table of Contents
+
+* [Executive Summary](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#executive-summary)
+* [Business Problem](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#business-problem)
+* [Key Stakeholders](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#key-stakeholders)
+* [Project Workflow](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#project-workflow)
+* [Database Structure](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#database-structure)
+* [Data Exploration](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#data-exploration)
+* [Analysis & Business Questions](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#analysis--business-questions)
+* [Business Insights Framework](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#business-insights-framework)
+* [Business Recommendations](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#business-recommendations)
+* [Key Takeaway](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#-key-takeaway)
+
+-----
 ## Business Problem
 
 An online bookstore needs to understand how its **products, customers, sales, and inventory** are performing.
 
 Without structured analysis, it can be difficult to identify:
 
-* Which genres and authors generate the highest sales volume
-* Which books are ordered most frequently
-* Which customers place multiple orders or spend the most
-* Which books have the highest prices
-* Which products have low remaining stock
-* How revenue is distributed across orders
-* Where customers are geographically located
+* Which genres and authors generate the highest sales volume?
+* Which books are ordered most frequently?
+* Which customers place multiple orders or spend the most?
+* Which books have the highest prices?
+* Which products have low remaining stock?
+* How revenue is distributed across orders?
+* Where customers are geographically located?
 
 The objective is to use SQL to turn transactional bookstore data into **actionable business information** for sales, customer, and inventory decisions.
 
 ---
 
-## Project Objectives
+## Project Scope
 
-The analysis was designed to answer the following business questions:
+The analysis focuses on four key areas:
 
-1. Which books belong to the Fiction genre?
-2. Which books were published after 1950?
-3. Which customers are from Canada?
-4. What orders were placed during November 2023?
-5. What is the total stock available?
-6. Which are the most expensive books?
-7. Which customers ordered more than one quantity?
-8. Which orders generated more than $20?
-9. What genres are available in the catalog?
-10. Which books have the lowest stock?
-11. What is the total revenue generated?
-12. How many books were sold by genre?
-13. What is the average price of Fantasy books?
-14. Which customers have placed at least two orders?
-15. Which book is ordered most frequently?
-16. What are the three most expensive Fantasy books?
-17. Which authors have sold the highest number of books?
-18. Where are customers who spent more than $30 located?
-19. Which customer has spent the most?
-20. How much stock remains after fulfilling recorded orders?
+- **Sales & Revenue:** Analyze order value, sales volume, and revenue performance.
+- **Product Performance:** Evaluate genres, authors, pricing, and book demand.
+- **Customer Behavior:** Identify repeat and high-value customers.
+- **Inventory:** Assess stock levels and remaining inventory after orders.
 
 ---
 
@@ -86,17 +85,6 @@ The analysis was designed to answer the following business questions:
 | **Inventory Team**      | Monitor stock levels and remaining inventory                 |
 | **Business Management** | Evaluate overall revenue and commercial performance          |
 | **Data / BI Teams**     | Maintain analytical queries and generate business insights   |
-
----
-
-## Tools & Technologies
-
-| Tool                           | Usage                                                       |
-| ------------------------------ | ----------------------------------------------------------- |
-| **PostgreSQL**                 | Database creation and SQL analysis                          |
-| **SQL**                        | Data exploration, transformation, aggregation, and analysis |
-| **Relational Database Design** | Connecting Books, Customers, and Orders                     |
-| **Joins & Aggregations**       | Combining datasets and generating business metrics          |
 
 ---
 
@@ -179,9 +167,9 @@ Before performing the analysis, the database was reviewed to understand the avai
 * Validating the relationship between customers, books, and orders
 * Setting the required date style for order-date analysis
 
-## The SQL script also includes the PostgreSQL database and table creation logic, followed by CSV data imports.
+-----
 
-# 📊 Analysis & Business Questions
+# Analysis & Business Questions
 
 ## 1. Product & Catalog Analysis
 
@@ -258,29 +246,6 @@ The remaining inventory calculation compares current book stock against the quan
 ### Business Value
 
 This provides a foundation for identifying **potential low-stock products and inventory replenishment priorities**.
-
----
-
-# Advanced SQL Analysis
-
-The project goes beyond basic filtering and sorting by applying:
-
-* `INNER JOIN`
-* `LEFT JOIN`
-* `GROUP BY`
-* `HAVING`
-* Aggregate functions
-* `COUNT()`
-* `SUM()`
-* `AVG()`
-* `DISTINCT`
-* `ORDER BY`
-* `LIMIT`
-* `COALESCE()`
-* Date filtering
-* Derived calculations
-
-These techniques are used to connect transactional data with product and customer information and answer business-level questions.
 
 ---
 
