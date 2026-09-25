@@ -177,7 +177,7 @@ The project uses PostgreSQL to answer practical business questions across **prod
 
 ## Product & Catalog Analysis
 
-### Q1. Which books belong to the Fiction genre?
+**Q1. Which books belong to the Fiction genre?**
 
 ```sql
 SELECT *
