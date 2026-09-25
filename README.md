@@ -170,7 +170,7 @@ Before performing the analysis, the database was reviewed to understand the avai
 
 # SQL Analysis & Queries
 
-### The project uses PostgreSQL to answer practical business questions across **product performance, sales, customer behavior, and inventory management**.
+The project uses PostgreSQL to answer practical business questions across **product performance, sales, customer behavior, and inventory management**.
 Few of the most insightful queries include:
 
 ---
