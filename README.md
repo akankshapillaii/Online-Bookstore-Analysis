@@ -29,7 +29,7 @@ Key business areas explored include:
 
 The project demonstrates the ability to translate business questions into structured SQL analysis.
 
-🔗 **[Check out the complete SQL code here →](OnlineBookstore.sql)**
+🔗 **[Check out the complete SQL code here →](Online-Bookstore.sql)**
 
 ---
 ## 📑 Table of Contents
