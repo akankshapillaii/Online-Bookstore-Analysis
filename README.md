@@ -172,25 +172,130 @@ Before performing the analysis, the database was reviewed to understand the avai
 # 🔍 SQL Analysis & Queries
 
 The project uses PostgreSQL to answer practical business questions across **product performance, sales, customer behavior, and inventory management**.
-
+Few of the most insightful queries include:
 ---
 
 ## Product & Catalog Analysis
 
-**Q1. Which books belong to the Fiction genre?**
-
+### Q1. Which are the 10 most expensive books?
 ```sql
 SELECT *
 FROM Books
-WHERE Genre = 'Fiction';
+ORDER BY Price DESC
+LIMIT 10;
+```
+### Q2. Which books have the lowest stock levels?
+```sql
+SELECT *
+FROM Books
+ORDER BY Stock ASC
+LIMIT 10;
 ```
 
-Q2. Which books were published after 1950?
-
+### Q3. What genres are available in the bookstore catalog?
 ```sql
-SELECT DISTINCT Title, Published_Year
+SELECT DISTINCT Genre
+FROM Books;
+```
+
+### Q4. What is the average price of books in the Fantasy genre?
+```sql
+SELECT AVG(Price) AS Avg_Price
 FROM Books
-WHERE Published_Year > 1950;
+WHERE Genre = 'Fantasy';
+```
+
+## Sales & Revenue Analysis
+
+### Q1. What is the total revenue generated from all orders?
+```sql
+SELECT SUM(Total_Amount) AS Revenue
+FROM Orders;
+```
+
+### Q2. Which genres have the highest number of books sold?
+```sql
+SELECT 
+    b.Genre,
+    SUM(o.Quantity) AS Total_Books_Sold
+FROM Orders o
+JOIN Books b 
+    ON o.Book_ID = b.Book_ID
+GROUP BY b.Genre;
+```
+
+### Q3. Which book is ordered most frequently?
+```sql
+SELECT 
+    o.Book_ID,
+    b.Title,
+    COUNT(o.Order_ID) AS Order_Count
+FROM Orders o
+JOIN Books b 
+    ON o.Book_ID = b.Book_ID
+GROUP BY o.Book_ID, b.Title
+ORDER BY Order_Count DESC
+LIMIT 1;
+```
+
+### Q4. Which authors have the highest book sales?
+```sql
+SELECT 
+    b.Author,
+    SUM(o.Quantity) AS Total_Quantity
+FROM Orders o
+JOIN Books b 
+    ON o.Book_ID = b.Book_ID
+GROUP BY b.Author
+ORDER BY Total_Quantity DESC;
+```
+
+## Customer Behavior Analysis
+
+Q1. Which customers have placed at least two orders?
+```sql
+SELECT 
+    o.Customer_ID,
+    c.Name,
+    COUNT(o.Order_ID) AS Order_Count
+FROM Orders o
+JOIN Customers c 
+    ON o.Customer_ID = c.Customer_ID
+GROUP BY o.Customer_ID, c.Name
+HAVING COUNT(o.Order_ID) >= 2;
+```
+
+Q2. Which customer has spent the most?
+```sql
+SELECT 
+    c.Customer_ID,
+    c.Name,
+    SUM(o.Total_Amount) AS Total_Spent
+FROM Orders o
+JOIN Customers c 
+    ON o.Customer_ID = c.Customer_ID
+GROUP BY c.Customer_ID, c.Name
+ORDER BY Total_Spent DESC
+LIMIT 1;
+```
+
+Q3. Which customers ordered more than one quantity of books?
+```sql
+SELECT *
+FROM Orders
+WHERE Quantity > 1
+ORDER BY Quantity DESC;
+```
+
+Q4. Where are customers who spent more than $30 located?
+```sql
+SELECT DISTINCT 
+    c.City,
+    o.Total_Amount
+FROM Orders o
+JOIN Customers c 
+    ON o.Customer_ID = c.Customer_ID
+WHERE o.Total_Amount > 30;
 ```
 
 # Business Insights Framework
