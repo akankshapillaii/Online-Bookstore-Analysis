@@ -29,21 +29,22 @@ Key business areas explored include:
 
 The project demonstrates the ability to translate business questions into structured SQL analysis.
 
-🔗 **[Check out the complete SQL code here →](Online-Bookstore.sql)**
+🔗 **Check out the complete SQL code [here](Online-Bookstore.sql)**
 
 ---
 ## 📑 Table of Contents
 
-* [Executive Summary](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#executive-summary)
-* [Business Problem](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#business-problem)
-* [Key Stakeholders](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#key-stakeholders)
-* [Project Workflow](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#project-workflow)
-* [Database Structure](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#database-structure)
-* [Data Exploration](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#data-exploration)
-* [Analysis & Business Questions](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#analysis--business-questions)
-* [Business Insights Framework](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#business-insights-framework)
-* [Business Recommendations](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#business-recommendations)
-* [Key Takeaway](https://github.com/akankshapillaii/Online-Bookstore-Analysis/edit/main/README.md#-key-takeaway)
+* [Executive Summary](https://github.com/akankshapillaii/Online-Bookstore-Analysis#executive-summary)
+* [Business Problem](https://github.com/akankshapillaii/Online-Bookstore-Analysis#business-problem)
+* [Project Scope](https://github.com/akankshapillaii/Online-Bookstore-Analysis#project-scope)
+* [Key Stakeholders](https://github.com/akankshapillaii/Online-Bookstore-Analysis#key-stakeholders)
+* [Project Workflow](https://github.com/akankshapillaii/Online-Bookstore-Analysis#project-workflow)
+* [Database Structure](https://github.com/akankshapillaii/Online-Bookstore-Analysis#database-structure)
+* [Data Exploration](https://github.com/akankshapillaii/Online-Bookstore-Analysis#data-exploration)
+* [SQL Analysis & Queries](https://github.com/akankshapillaii/Online-Bookstore-Analysis#-sql-analysis--queries)
+* [Business Insights Framework](https://github.com/akankshapillaii/Online-Bookstore-Analysis#business-insights-framework)
+* [Business Recommendations](https://github.com/akankshapillaii/Online-Bookstore-Analysis#business-recommendations)
+* [Key Takeaway](https://github.com/akankshapillaii/Online-Bookstore-Analysis#-key-takeaway)
 
 -----
 ## Business Problem
@@ -114,41 +115,39 @@ Recommendations
 
 # Database Structure
 
-The project uses three relational tables.
-
 ### Books
 
-| Column           | Description            |
-| ---------------- | ---------------------- |
-| `Book_ID`        | Unique book identifier |
-| `Title`          | Book title             |
-| `Author`         | Book author            |
-| `Genre`          | Book category          |
-| `Published_Year` | Year of publication    |
-| `Price`          | Book price             |
-| `Stock`          | Available stock        |
+| Column Name | Description | Data Type |
+|---|---|---|
+| `Book_ID` | Unique identifier for each book | Integer |
+| `Title` | Title of the book | Text |
+| `Author` | Name of the book's author | Text |
+| `Genre` | Genre or category of the book | Text |
+| `Published_Year` | Year the book was published | Integer |
+| `Price` | Selling price of the book | Numeric |
+| `Stock` | Available quantity in inventory | Integer |
 
 ### Customers
 
-| Column        | Description                |
-| ------------- | -------------------------- |
-| `Customer_ID` | Unique customer identifier |
-| `Name`        | Customer name              |
-| `Email`       | Customer email             |
-| `Phone`       | Customer phone number      |
-| `City`        | Customer city              |
-| `Country`     | Customer country           |
+| Column Name | Description | Data Type |
+|---|---|---|
+| `Customer_ID` | Unique identifier for each customer | Integer |
+| `Name` | Customer's full name | Text |
+| `Email` | Customer's email address | Text |
+| `Phone` | Customer's contact number | Text |
+| `City` | Customer's city of residence | Text |
+| `Country` | Customer's country of residence | Text |
 
 ### Orders
 
-| Column         | Description             |
-| -------------- | ----------------------- |
-| `Order_ID`     | Unique order identifier |
-| `Customer_ID`  | Linked customer         |
-| `Book_ID`      | Linked book             |
-| `Order_Date`   | Date of order           |
-| `Quantity`     | Number of books ordered |
-| `Total_Amount` | Total order value       |
+| Column Name | Description | Data Type |
+|---|---|---|
+| `Order_ID` | Unique identifier for each order | Integer |
+| `Customer_ID` | Identifier linking the order to a customer | Integer |
+| `Book_ID` | Identifier linking the order to a book | Integer |
+| `Order_Date` | Date on which the order was placed | Date |
+| `Quantity` | Number of books ordered | Integer |
+| `Total_Amount` | Total monetary value of the order | Numeric |
 
 The database uses primary and foreign-key relationships to connect customers and books with their corresponding orders.
 
@@ -169,10 +168,11 @@ Before performing the analysis, the database was reviewed to understand the avai
 
 -----
 
-# 🔍 SQL Analysis & Queries
+# SQL Analysis & Queries
 
-The project uses PostgreSQL to answer practical business questions across **product performance, sales, customer behavior, and inventory management**.
+### The project uses PostgreSQL to answer practical business questions across **product performance, sales, customer behavior, and inventory management**.
 Few of the most insightful queries include:
+
 ---
 
 ## Product & Catalog Analysis
@@ -361,7 +361,7 @@ Analysis of expensive books and genre-level average pricing can help identify di
 
 ---
 
-# 🚀 Key Takeaway
+# Key Takeaway
 
 This project demonstrates how SQL can be used to move from **raw transactional data to structured business analysis**.
 
