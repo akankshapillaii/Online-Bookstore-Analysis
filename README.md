@@ -27,7 +27,10 @@ Key business areas explored include:
 * Stock availability and remaining inventory
 * Geographic distribution of customers
 
-**Tech Stack:** `PostgreSQL` · `SQL` · `Data Analysis` · `GitHub`
+**Tech Stack:**  ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat)
+![Data Analysis](https://img.shields.io/badge/Data%20Analysis-FF6F00?style=flat)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat)
 
 The project demonstrates the ability to translate business questions into structured SQL analysis.
 
