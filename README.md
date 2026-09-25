@@ -41,7 +41,7 @@ The project demonstrates the ability to translate business questions into struct
 * [Project Workflow](https://github.com/akankshapillaii/Online-Bookstore-Analysis#project-workflow)
 * [Database Structure](https://github.com/akankshapillaii/Online-Bookstore-Analysis#database-structure)
 * [Data Exploration](https://github.com/akankshapillaii/Online-Bookstore-Analysis#data-exploration)
-* [SQL Analysis & Queries](https://github.com/akankshapillaii/Online-Bookstore-Analysis#-sql-analysis--queries)
+* [SQL Analysis & Queries](https://github.com/akankshapillaii/Online-Bookstore-Analysis#sql-analysis--queries)
 * [Business Insights Framework](https://github.com/akankshapillaii/Online-Bookstore-Analysis#business-insights-framework)
 * [Business Recommendations](https://github.com/akankshapillaii/Online-Bookstore-Analysis#business-recommendations)
 * [Key Takeaway](https://github.com/akankshapillaii/Online-Bookstore-Analysis#-key-takeaway)
