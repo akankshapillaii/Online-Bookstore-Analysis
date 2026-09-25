@@ -177,14 +177,14 @@ Few of the most insightful queries include:
 
 ## Product & Catalog Analysis
 
-### Q1. Which are the 10 most expensive books?
+**Q1. Which are the 10 most expensive books?**
 ```sql
 SELECT *
 FROM Books
 ORDER BY Price DESC
 LIMIT 10;
 ```
-### Q2. Which books have the lowest stock levels?
+**Q2. Which books have the lowest stock levels?**
 ```sql
 SELECT *
 FROM Books
@@ -192,13 +192,13 @@ ORDER BY Stock ASC
 LIMIT 10;
 ```
 
-### Q3. What genres are available in the bookstore catalog?
+**Q3. What genres are available in the bookstore catalog?**
 ```sql
 SELECT DISTINCT Genre
 FROM Books;
 ```
 
-### Q4. What is the average price of books in the Fantasy genre?
+**Q4. What is the average price of books in the Fantasy genre?**
 ```sql
 SELECT AVG(Price) AS Avg_Price
 FROM Books
@@ -207,13 +207,13 @@ WHERE Genre = 'Fantasy';
 
 ## Sales & Revenue Analysis
 
-### Q1. What is the total revenue generated from all orders?
+**Q1. What is the total revenue generated from all orders?**
 ```sql
 SELECT SUM(Total_Amount) AS Revenue
 FROM Orders;
 ```
 
-### Q2. Which genres have the highest number of books sold?
+**Q2. Which genres have the highest number of books sold?**
 ```sql
 SELECT 
     b.Genre,
@@ -224,7 +224,7 @@ JOIN Books b
 GROUP BY b.Genre;
 ```
 
-### Q3. Which book is ordered most frequently?
+**Q3. Which book is ordered most frequently?**
 ```sql
 SELECT 
     o.Book_ID,
@@ -238,7 +238,7 @@ ORDER BY Order_Count DESC
 LIMIT 1;
 ```
 
-### Q4. Which authors have the highest book sales?
+**Q4. Which authors have the highest book sales?**
 ```sql
 SELECT 
     b.Author,
@@ -252,7 +252,7 @@ ORDER BY Total_Quantity DESC;
 
 ## Customer Behavior Analysis
 
-Q1. Which customers have placed at least two orders?
+**Q1. Which customers have placed at least two orders?**
 ```sql
 SELECT 
     o.Customer_ID,
@@ -265,7 +265,7 @@ GROUP BY o.Customer_ID, c.Name
 HAVING COUNT(o.Order_ID) >= 2;
 ```
 
-Q2. Which customer has spent the most?
+**Q2. Which customer has spent the most?**
 ```sql
 SELECT 
     c.Customer_ID,
@@ -279,7 +279,7 @@ ORDER BY Total_Spent DESC
 LIMIT 1;
 ```
 
-Q3. Which customers ordered more than one quantity of books?
+**Q3. Which customers ordered more than one quantity of books?**
 ```sql
 SELECT *
 FROM Orders
@@ -287,7 +287,7 @@ WHERE Quantity > 1
 ORDER BY Quantity DESC;
 ```
 
-Q4. Where are customers who spent more than $30 located?
+**Q4. Where are customers who spent more than $30 located?**
 ```sql
 SELECT DISTINCT 
     c.City,
