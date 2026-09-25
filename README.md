@@ -14,7 +14,7 @@ This project analyzes an online bookstore database containing three interconnect
 * **Customers** — customer details and location
 * **Orders** — order date, quantity, and total transaction value
 
-The analysis progresses from **database setup and data exploration** to increasingly advanced SQL queries using filtering, aggregation, joins, `GROUP BY`, `HAVING`, sorting, and derived metrics.
+The analysis progresses from **database setup and data exploration** to increasingly advanced SQL queries using filtering, aggregation, joins, group by, having, sorting, and derived metrics.
 
 Key business areas explored include:
 
@@ -26,6 +26,8 @@ Key business areas explored include:
 * Pricing and expensive-book analysis
 * Stock availability and remaining inventory
 * Geographic distribution of customers
+
+**Tech Stack:** `PostgreSQL` · `SQL` · `Data Analysis` · `GitHub`
 
 The project demonstrates the ability to translate business questions into structured SQL analysis.
 
